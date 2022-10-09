@@ -14,6 +14,13 @@ $ go run server.go
 
 On your browser go to http://localhost:8080/chart.html to see the chart
 
+# Next Steps
+
+* We have a sample load chart that can scale up with dom elements getting added. 
+  >> This is v0 of the UI.
+
+* How can we abstract this in an easy way so that the experience of someone starting out can be made better? 
+
 # Whats the vision?
 
 So chart js gives charts with a little bit of learning. This is essentially an abstraction of that.
