@@ -19,6 +19,12 @@ On your browser go to http://localhost:8080/chart.html to see the chart
 * We have a sample load chart that can scale up with dom elements getting added. 
   >> This is v0 of the UI.
 
+* Work on open telemetry collector.
+
+https://opentelemetry.io/docs/collector/custom-collector/
+
+Is there a way to create the collector and have steps to build a WASM out of it?
+
 * How can we abstract this in an easy way so that the experience of someone starting out can be made better? 
 
 # Whats the vision?
