@@ -14,28 +14,86 @@ window.addEventListener('load', (event) => {
 
 const loadCharts = function() {
   loadBarChart()
-  loadLineChart(0)
-  loadLineChart(1)
-  loadLineChart(2)
+
+  let charts = [
+    {
+      title: 'Jan-June',
+      labels: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June'
+      ],
+      points: [
+        0,
+        10,
+        5,
+        2,
+        20,
+        30,
+        45
+      ],
+    },
+    {
+      title: 'Jul-Dec',
+      labels: [
+        'July',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ],
+      points: [
+        9,
+        2,
+        4,
+        26,
+        20,
+        30,
+        45
+      ],
+    },
+    {
+      title: 'Mar-Aug',
+      labels: [
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+      ],
+      points: [
+        87,
+        56,
+        40,
+        26,
+        20,
+        30,
+        45
+      ]
+    }
+  ]
+
+  let i = 0
+  for(let chart of charts) {
+    loadLineChart(i, chart)
+    i++
+  }
 }
 
-const loadLineChart = function(i) {
-  const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+const loadLineChart = function(i, chart) {
 
   const data = {
-    labels: labels,
+    labels: chart.labels,
     datasets: [{
-      label: 'My First dataset',
+      label: chart.title || '',
       backgroundColor: 'rgb(204, 255, 153)',
       borderColor: 'rgb(204, 255, 153)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: chart.points,
     }]
   };
 
@@ -113,7 +171,6 @@ const loadBarChart = function() {
 </head>
 
 <body>
-
     <section>
       <article>
         <h2>Test bar chart</h2>
